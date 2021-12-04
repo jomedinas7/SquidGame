@@ -12,6 +12,9 @@ import java.util.stream.Stream;
 
 public class FileUtils {
 
+    private FileUtils(){
+    }
+
     public static String getBaseName(String fileName) {
         int pos = fileName.lastIndexOf(".");
         if (pos > 0 && pos < (fileName.length() - 1)) { // If '.' is not the first or last character.

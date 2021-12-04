@@ -76,10 +76,10 @@ public class CommandHandler implements CommandExecutor {
 
         // Parse arguments
         final Object[] argList = new Object[args.length];
-        final int argumentDefinedLength = command.arguments().length;
+        final int argsLength = command.arguments().length;
 
         for (int i = 0; i < args.length; i++) {
-            if (argumentDefinedLength >= (i + 1)) {
+            if (argsLength >= (i + 1)) {
                 final Class<?> clazz = command.arguments()[i];
                 try {
                     final Object arg = CommandArgumentParser.parse(clazz, i + 1, args[i]);

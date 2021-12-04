@@ -225,15 +225,12 @@ public class Arena {
     }
 
     public Arena addSpectator(final SquidPlayer player) {
-        if (!this.spectators.contains(player)) {
-            if (this.players.contains(player)) {
+        if ((!this.spectators.contains(player)) && this.players.contains(player)) {
                 this.players.remove(player);
                 this.spectators.add(player);
                 player.setSpectator(true);
                 player.setArena(this);
             }
-        }
-
         return this;
     }
 

@@ -16,8 +16,8 @@ import dev._2lstudios.jelly.player.IPluginPlayerManager;
 
 public class JellyPlugin extends JavaPlugin {
 
-    private CommandHandler commandHandler = new CommandHandler(this);
-    private ConfigManager configManager = new ConfigManager(this);
+    private final CommandHandler commandHandler = new CommandHandler(this);
+    private final ConfigManager configManager = new ConfigManager(this);
     private IPluginPlayerManager pluginPlayerManager;
 
     public void useInventoryAPI() {
